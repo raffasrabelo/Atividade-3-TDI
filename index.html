@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Atividade 3 - TDI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="carregar()">
+
+    <section class="secao-hora">
+        <h2>Hora do Dia</h2>
+        <div class="bloco-mensagem-foto">
+            <div id="imagem-container">
+                <img id="imagem-dia" src="images/manha.png" alt="Foto da Manhã">
+            </div>
+            <div id="mensagem">
+                Aqui vai aparecer a mensagem...
+            </div>
+        </div>
+    </section>
+
+    <section class="secao-contador">
+        <h2>Contador</h2>
+        <div class="area-dados-contador">
+            <div id="dados-contador">
+                <p> Início: <input type="number" name="inicio-contador" id="txt-inicio"></p>
+                <p> Fim: <input type="number" name="fim-contador" id="txt-fim"></p>
+                <p> Passo: <input type="number" name="passo-contador" id="txt-passo"></p>
+                <p> <input id="btn-contar" type="button" value="Contar" onclick="contar()"></p>
+            </div>
+            <div id="res-contador">
+                <p>Preparando a Contagem...</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="secao-tabuada">
+        <h2>Tabuada</h2>
+        <div class="area-num-tabuada">
+            <div>
+                <p> Número: <input type="number" name="numero-tabuada" id="txt-numero">
+                <input id="btn-tabuada" type="button" value="Gerar Tabuada" onclick="tabuada()"></p>
+            </div>
+            <div class="area-selecao-tabuada">
+                <select name="selecao-tabuada" id="selecao-tabuada" size="10">
+                    <option> Digite um número acima </option>
+                </select>
+            </div>
+        </div>
+    </section>
+    
+    <section class="secao-analisador">
+        <h2>Analisador de Números</h2>
+        <div class="area-dados-analisador">
+            <div>
+                <p> Número (entre 1 e 100): 
+                    <input type="number" name="numero-analisador" id="numero-analisador">
+                    <input id="btn-adicionar" type="button" value="Adicionar" onclick="adicionar()"> <br>
+                    <div class="area-lista-analisador">
+                        <select name="lista-analisador" id="lista-analisador" size="6"></select><br>
+                    </div>
+                    
+                    <input id="btn-finalizar" type="button" value="Finalizar" onclick="finalizar()">
+                </p>
+            </div>
+            <div id="resultado-analisador">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Feito por: Rafael Rabelo </p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="analisador.js"></script>
+</body>
+</html>
